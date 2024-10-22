@@ -6,17 +6,26 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E406F3F02CC838DD00AD0AC1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E406F3EA2CC838DD00AD0AC1 /* ContentView.swift */; };
+		E406F3F12CC838DD00AD0AC1 /* Custom_TimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E406F3EB2CC838DD00AD0AC1 /* Custom_TimerApp.swift */; };
+		E406F3F22CC838DD00AD0AC1 /* ReadSizeViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E406F3EC2CC838DD00AD0AC1 /* ReadSizeViewExtension.swift */; };
+		E406F3F32CC838DD00AD0AC1 /* TimerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E406F3ED2CC838DD00AD0AC1 /* TimerObject.swift */; };
+		E406F3F42CC838DD00AD0AC1 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E406F3EE2CC838DD00AD0AC1 /* TimerView.swift */; };
+		E406F3F52CC838DD00AD0AC1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E406F3E72CC838DD00AD0AC1 /* Preview Assets.xcassets */; };
+		E406F3F62CC838DD00AD0AC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E406F3E92CC838DD00AD0AC1 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		E406F3E72CC838DD00AD0AC1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E406F3E92CC838DD00AD0AC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E406F3EA2CC838DD00AD0AC1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E406F3EB2CC838DD00AD0AC1 /* Custom_TimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom_TimerApp.swift; sourceTree = "<group>"; };
+		E406F3EC2CC838DD00AD0AC1 /* ReadSizeViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadSizeViewExtension.swift; sourceTree = "<group>"; };
+		E406F3ED2CC838DD00AD0AC1 /* TimerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerObject.swift; sourceTree = "<group>"; };
+		E406F3EE2CC838DD00AD0AC1 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		E46289932CC1C49300A77F6F /* Custom Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Custom Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		E46289952CC1C49300A77F6F /* Custom Timer */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Custom Timer";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E46289902CC1C49300A77F6F /* Frameworks */ = {
@@ -29,10 +38,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E406F3E82CC838DD00AD0AC1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E406F3E72CC838DD00AD0AC1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E406F3EF2CC838DD00AD0AC1 /* Custom Timer */ = {
+			isa = PBXGroup;
+			children = (
+				E406F3E82CC838DD00AD0AC1 /* Preview Content */,
+				E406F3E92CC838DD00AD0AC1 /* Assets.xcassets */,
+				E406F3EA2CC838DD00AD0AC1 /* ContentView.swift */,
+				E406F3EB2CC838DD00AD0AC1 /* Custom_TimerApp.swift */,
+				E406F3ED2CC838DD00AD0AC1 /* TimerObject.swift */,
+				E406F3EE2CC838DD00AD0AC1 /* TimerView.swift */,
+				E406F3EC2CC838DD00AD0AC1 /* ReadSizeViewExtension.swift */,
+			);
+			path = "Custom Timer";
+			sourceTree = "<group>";
+		};
 		E462898A2CC1C49300A77F6F = {
 			isa = PBXGroup;
 			children = (
-				E46289952CC1C49300A77F6F /* Custom Timer */,
+				E406F3EF2CC838DD00AD0AC1 /* Custom Timer */,
 				E46289942CC1C49300A77F6F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,9 +90,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				E46289952CC1C49300A77F6F /* Custom Timer */,
 			);
 			name = "Custom Timer";
 			packageProductDependencies = (
@@ -109,6 +137,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E406F3F52CC838DD00AD0AC1 /* Preview Assets.xcassets in Resources */,
+				E406F3F62CC838DD00AD0AC1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E406F3F02CC838DD00AD0AC1 /* ContentView.swift in Sources */,
+				E406F3F12CC838DD00AD0AC1 /* Custom_TimerApp.swift in Sources */,
+				E406F3F22CC838DD00AD0AC1 /* ReadSizeViewExtension.swift in Sources */,
+				E406F3F32CC838DD00AD0AC1 /* TimerObject.swift in Sources */,
+				E406F3F42CC838DD00AD0AC1 /* TimerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
