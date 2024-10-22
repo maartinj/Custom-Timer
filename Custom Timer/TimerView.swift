@@ -57,21 +57,21 @@ struct TimerView: View {
             } label: {
                 Image(systemName: "play.fill")
             }
-            .disabled(timerObject.playButtonDisabled)
+            .modifier(ControlButtonStyle(color: timerObject.timerColor, disabled: timerObject.playButtonDisabled))
             
             Button {
                 timerObject.stopTimer()
             } label: {
                 Image(systemName: "pause.fill")
             }
-            .disabled(timerObject.pauseButtonDisabled)
+            .modifier(ControlButtonStyle(color: timerObject.timerColor, disabled: timerObject.pauseButtonDisabled))
             
             Button {
                 timerObject.resetTimer()
             } label: {
                 Image(systemName: "gobackward")
             }
-            .disabled(timerObject.resetButtonDisabled)
+            .modifier(ControlButtonStyle(color: timerObject.timerColor, disabled: timerObject.resetButtonDisabled))
         }
     }
     
@@ -84,4 +84,20 @@ struct TimerView: View {
 
 #Preview {
     TimerView(timerObject: TimerObject(timerColor: .red, length: 20), controls: true)
+}
+
+struct ControlButtonStyle: ViewModifier {
+    let color: Color
+    let disabled: Bool
+    
+    func body(content: Content) -> some View {
+        content
+            .font(.title)
+            .bold()
+            .frame(width: 50, height: 50)
+            .background(color).opacity(disabled ? 0.5 : 1)
+            .foregroundStyle(.white)
+            .clipShape(Circle())
+            .disabled(disabled)
+    }
 }
