@@ -12,13 +12,41 @@ struct TimerView: View {
     let controls: Bool
     
     var body: some View {
-        Text(displayTime(timerObject.remainingTime))
-            .monospacedDigit()
-            .font(.system(size: 100))
-            .foregroundStyle(timerObject.timerColor)
-            .bold()
-            .contentTransition(.numericText())
-            .animation(.linear, value: timerObject.remainingTime)
+        // continue 14:07
+        ZStack {
+            Circle()
+                .stroke(lineWidth: 30)
+                .foregroundStyle(timerObject.timerColor.opacity(0.4))
+            Circle()
+                .trim(from: 0.0, to: min(1 - timerObject.progress, 1.0))
+                .stroke(timerObject.timerColor.gradient, style: StrokeStyle(
+                    lineWidth: 30,
+                    lineCap: .round,
+                    lineJoin: .miter))
+                .rotationEffect(.degrees(-90))
+                .shadow(radius: 2)
+            Circle()
+                .stroke(lineWidth: 15)
+                .foregroundStyle(Color(uiColor: .systemBackground))
+                .shadow(color: timerObject.timerColor.opacity(0.6), radius: 5)
+                .frame(width: 40)
+                .offset(x: -157)
+                .rotationEffect(.degrees(90.0 - 360 * timerObject.progress))
+            VStack {
+                Text(displayTime(timerObject.length))
+                    .monospacedDigit()
+                    .font(.system(size: 25))
+                
+                Text(displayTime(timerObject.remainingTime))
+                    .monospacedDigit()
+                    .font(.system(size: 100))
+            }
+                .foregroundStyle(timerObject.timerColor)
+                .bold()
+                .contentTransition(.numericText())
+        }
+        .padding(40)
+        .animation(.linear, value: timerObject.remainingTime)
         
         HStack {
             Button {
